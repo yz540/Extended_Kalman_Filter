@@ -9,7 +9,8 @@ using Eigen::MatrixXd;
 using Eigen::VectorXd;
 using std::string;
 using std::vector;
-
+using std::cout;
+using std::endl;
 // for convenience
 using json = nlohmann::json;
 
@@ -90,7 +91,7 @@ int main() {
             iss >> timestamp;
             meas_package.timestamp_ = timestamp;
           }
-
+          cout << "raw measurements=" << endl <<  meas_package.raw_measurements_ << endl;
           float x_gt;
           float y_gt;
           float vx_gt;
